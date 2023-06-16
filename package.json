@@ -2,10 +2,14 @@
   "name": "@thongdn/web3",
   "version": "0.0.1",
   "description": "This is a smart wrapper Web3 Ethereum JavaScript API.",
-  "main": "./lib/main.js",
-  "types": "./lib/main.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "rm -rf lib && npx tsc",
+    "prepare" : "npm run build",
+    "build": "rm -rf lib && tsc",
     "test": "node test/example.js"
   },
   "repository": {
