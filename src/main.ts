@@ -1,4 +1,5 @@
-import Web3, {
+import {
+  Web3 as Web3JS,
   Contract,
   EthExecutionAPI,
   HttpProvider,
@@ -10,11 +11,11 @@ import Web3, {
 import { EtherUnits } from "web3-utils";
 import { ContractType, getAbiWithType } from "./contract_apis/index";
 
-export class RNWeb3 {
-  web3: Web3;
+export class Web3 {
+  web3: Web3JS;
 
   constructor(provider?: SupportedProviders<EthExecutionAPI> | string) {
-    this.web3 = new Web3(provider);
+    this.web3 = new Web3JS(provider);
     this.addListeners();
   }
 
